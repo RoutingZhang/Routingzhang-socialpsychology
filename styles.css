@@ -74,7 +74,8 @@ strong{font-weight:700}
 .becoming-entry>p:last-child{font-size:17px;line-height:1.8}
 /* Warm white and pale plum, with a spacious, typographic Contact section. */
 .contact{display:flex;align-items:center;min-height:460px;padding:100px 0 108px;text-align:center;background:var(--soft);color:var(--heading)}
-.contact h2{position:relative;font-size:40px;font-weight:700;letter-spacing:3px;text-transform:uppercase;line-height:1.25;color:var(--heading);margin-bottom:52px}
+.research .section-head h2,.contact h2{position:relative;font-size:40px;font-weight:700;letter-spacing:3px;text-transform:uppercase;line-height:1.25;color:var(--heading)}
+.contact h2{margin-bottom:52px}
 .research .section-head h2::after,.contact h2::after{content:"";position:absolute;width:30px;height:3px;border-radius:3px;background:#a98ba0;left:50%;bottom:-19px;transform:translateX(-50%)}
 .email-button{display:inline-flex;justify-content:center;align-items:center;min-height:60px;padding:17px 52px;border-radius:5px;background:#78576f;color:white;font-size:17px;line-height:1.5;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;text-decoration:none;box-shadow:0 6px 20px rgb(67 40 57 / 12%);transition:transform .25s,background .25s,box-shadow .25s}
 .email-button:hover{background:#62445a;color:white;transform:translateY(-2px);text-decoration:none;box-shadow:0 9px 25px rgb(67 40 57 / 18%)}
@@ -137,7 +138,7 @@ strong{font-weight:700}
  .becoming-list{grid-template-columns:1fr;gap:38px;margin-top:22px;max-width:520px}
  .becoming-entry h3{font-size:24px}
  .contact{min-height:360px;padding:76px 0 82px}
- .contact h2{font-size:34px;letter-spacing:2.5px}
+ .research .section-head h2,.contact h2{font-size:34px;letter-spacing:2.5px}
  .email-button{font-size:16px;padding-inline:42px}
  .footer-main{flex-direction:column;gap:30px;padding-block:36px}
 }
