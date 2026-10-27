@@ -1,0 +1,144 @@
+/* An English reading page, using the homepage's warm-white and pale-plum palette. */
+.story-main{width:min(calc(100% - 80px),1040px);margin-inline:auto;padding-bottom:70px}
+.story-back{display:inline-flex;align-items:center;min-height:44px;margin-top:28px;font-size:15px;text-decoration:none}
+.story-hero{display:grid;grid-template-columns:minmax(0,1fr) 280px;align-items:center;gap:64px;padding:32px 0 48px}
+.story-eyebrow{color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;margin-bottom:15px}
+.story-hero h1{font-size:48px;line-height:1.15;letter-spacing:-1px;font-weight:600;color:var(--heading);margin-bottom:20px}
+.story-paper-title{font-size:21px;color:var(--heading);font-weight:600}
+.story-deck{font-size:18px;line-height:1.7;margin-top:16px;max-width:580px}
+.story-byline{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:24px;font-size:14px;color:var(--muted)}
+.story-hero-image{width:100%;height:auto;border-radius:5px;box-shadow:0 14px 35px rgb(67 40 57 / 7%)}
+.story-contents{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px 26px;padding:18px 0}
+.story-contents a{display:flex;gap:14px;align-items:center;min-height:44px;font-size:16px;font-weight:600;color:var(--heading);text-decoration:none}
+.story-contents a>span{font-size:12px;font-weight:400;color:var(--accent);letter-spacing:.08em}
+.story-contents a:hover{color:var(--accent)}
+.story-reading{max-width:760px;margin-inline:auto}
+.story-section{padding-top:76px;scroll-margin-top:5px}
+.story-section-heading{margin-bottom:36px}
+.story-section-heading h2{font-size:32px;font-weight:600;line-height:1.3;letter-spacing:-.45px;color:var(--heading)}
+.timeline-list{list-style:none;padding:0;margin:0 0 0 7px}
+.milestone{position:relative;display:grid;grid-template-columns:160px minmax(0,1fr);gap:24px;padding:0 0 23px 26px;align-items:baseline}
+.milestone::before{content:"";position:absolute;left:-5px;top:9px;width:9px;height:9px;background:var(--paper);border:2px solid #a38699;border-radius:50%}
+.milestone time{font-size:15px;line-height:1.6;font-weight:600;color:var(--heading)}
+.milestone p{font-size:17px;line-height:1.65}
+.milestone:last-child{padding-bottom:0}
+.milestone-final::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px #eee3eb}
+.milestone-final p{color:var(--accent);font-weight:600}
+.reflection{padding:31px 0 34px}
+.reflection:first-of-type{padding-top:0}
+.reflection-heading{display:flex;gap:17px;align-items:baseline;margin-bottom:20px}
+.reflection-number{font-size:16px;color:#947187;font-weight:400}
+.reflection h3{font-size:23px;line-height:1.4;color:var(--heading);font-weight:600;letter-spacing:-.2px}
+.story-copy p{font-size:18px;line-height:1.8}
+.story-copy p+p{margin-top:17px}
+.story-copy strong{font-weight:600;color:var(--heading)}
+.gratitude-list{list-style:none;padding:0;margin:26px 0 0}
+.gratitude-list>li{position:relative;padding:26px 0 26px 24px}
+.gratitude-list>li::before{content:"";position:absolute;left:0;top:39px;width:5px;height:5px;border-radius:50%;background:#a38699}
+.gratitude-closing{margin-top:17px}
+.mentorship-quote{margin-top:38px;background:var(--soft);padding:34px 38px;border-radius:4px}
+.mentorship-quote blockquote{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.55;letter-spacing:-.3px;color:var(--heading)}
+.mentorship-quote figcaption{font-size:14px;color:var(--accent);font-weight:600;line-height:1.7;margin-top:22px}
+.mentorship-quote figcaption span{display:block;font-size:13px;font-weight:400;color:var(--muted);margin-top:3px}
+.story-end{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;margin-top:65px;padding-top:24px;font-size:16px}
+.story-end a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.story-end>div{display:flex;align-items:center;gap:18px}
+@media(max-width:900px){
+ .story-main{width:calc(100% - 56px)}
+ .story-hero{gap:35px;grid-template-columns:minmax(0,1fr) 220px}
+ .story-hero h1{font-size:40px}
+}
+@media(max-width:650px){
+ .story-main{width:calc(100% - 40px);padding-bottom:45px}
+ .story-back{margin-top:18px}
+ .story-hero{grid-template-columns:1fr;padding:23px 0 34px;gap:28px}
+ .story-hero h1{font-size:38px;letter-spacing:-.7px}
+ .story-hero-image{max-width:270px;justify-self:center}
+ .story-deck{font-size:17px}
+ .story-contents{flex-direction:column;gap:2px;padding:13px 0}
+ .story-section{padding-top:50px}
+ .story-section-heading{margin-bottom:28px}
+ .story-section-heading h2{font-size:28px}
+ .milestone{display:block;padding:0 0 23px 23px}
+ .milestone time{display:block;font-size:15px;margin-bottom:5px}
+ .milestone p{font-size:16px}
+ .reflection{padding:27px 0 30px}
+ .reflection h3{font-size:22px}
+ .reflection-heading{gap:13px}
+ .story-copy p{font-size:17px;line-height:1.8}
+ .gratitude-list>li{padding-left:18px}
+ .mentorship-quote{padding:26px 23px}
+ .mentorship-quote blockquote{font-size:24px}
+ .story-end{margin-top:45px;gap:12px}
+}
+@media print{
+ .story-main{width:100%;max-width:none;padding:0}
+ .story-back,.story-contents,.story-end{display:none!important}
+ .story-section{padding-top:28px}
+ .story-hero h1{font-size:25pt}
+ .story-hero-image{max-width:180px}
+ .story-copy p{font-size:11pt}
+ .reflection-heading,.story-section-heading{break-after:avoid}
+ .mentorship-quote{break-inside:avoid}
+}
+
+/* Original illustrations, paired with the English account. */
+.timeline-with-figure{display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:56px;align-items:start}
+.timeline-illustrated .milestone{grid-template-columns:145px minmax(0,1fr);gap:18px}
+.story-figure{margin:0}
+.image-open{display:block;width:100%;padding:8px;border:0;border-radius:5px;background:var(--white);cursor:zoom-in;box-shadow:0 6px 24px rgb(67 40 57 / 4%);color:var(--accent)}
+.image-open img{width:100%;height:auto;display:block}
+.enlarge-hint{display:block;font-size:13px;line-height:1.7;padding:11px 3px 5px;font-weight:600}
+.story-figure figcaption{margin-top:13px;font-size:14px;line-height:1.7;color:var(--muted)}
+.mentorship-figure{width:min(100%,540px);margin:38px auto 0}
+.image-dialog{border:0;border-radius:8px;padding:0;width:min(calc(100% - 32px),960px);max-width:none;max-height:92vh;max-height:92dvh;background:var(--white);color:var(--ink);box-shadow:0 20px 80px rgb(0 0 0 / 25%)}
+.image-dialog::backdrop{background:rgb(34 25 37 / 72%)}
+.image-dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 18px}
+.image-dialog-heading h2{font-size:17px;font-weight:600;line-height:1.4;color:var(--heading)}
+.image-close{flex-shrink:0;min-height:44px;border:0;border-radius:4px;padding:7px 14px;background:var(--paper);color:var(--accent);cursor:pointer;font-size:14px}
+.image-dialog-scroll{max-height:calc(92vh - 74px);max-height:calc(92dvh - 74px);overflow:auto;padding:16px;overscroll-behavior:contain}
+.image-dialog-scroll img{display:block;width:auto;max-width:100%;height:auto;margin-inline:auto}
+body:has(.image-dialog[open]){overflow:hidden}
+/* Shared prose settings keep both accounts comfortable to read. */
+.story-copy p{line-height:1.85}
+.gratitude-chapter{padding:28px 0}
+.gratitude-chapter:first-of-type{padding-top:0}
+.gratitude-chapter:last-child{border-bottom:0;padding-bottom:0}
+.gratitude-chapter h3{font-size:23px;line-height:1.4;color:var(--heading);font-weight:600;letter-spacing:-.2px;margin-bottom:19px}
+.idea-routes{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:25px 0}
+.idea-routes section{background:var(--soft);padding:22px 24px;border-radius:3px}
+.idea-routes h4{font-size:18px;color:var(--heading);font-weight:600;line-height:1.5;margin:0 0 10px}
+.idea-routes p{font-size:16px;line-height:1.75}
+.review-questions{padding-left:23px;margin:20px 0;font-size:18px;line-height:1.8}
+.review-questions li{padding-left:5px;margin:8px 0}
+.review-questions li::marker{color:var(--accent)}
+.story-closing{margin-top:34px}
+.story-date{max-width:760px;margin:42px auto 0;font-size:15px;color:var(--muted);line-height:1.6}
+.story-date+.story-end{margin-top:26px}
+.milestone-accepted::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px #eee3eb}
+.milestone-accepted p{color:var(--accent);font-weight:600}
+@media(max-width:900px){
+ .timeline-with-figure{grid-template-columns:minmax(0,1fr) 210px;gap:32px}
+ .timeline-illustrated .milestone{display:block}
+ .timeline-illustrated .milestone time{display:block;margin-bottom:5px}
+}
+@media(max-width:650px){
+ .timeline-with-figure{display:flex;flex-direction:column;gap:32px}
+ .timeline-art{width:min(100%,250px);align-self:center}
+ .timeline-with-figure .timeline-list{width:calc(100% - 7px)}
+ .gratitude-chapter{padding:24px 0}
+ .gratitude-chapter h3{font-size:22px}
+ .idea-routes{grid-template-columns:1fr;gap:13px}
+ .idea-routes section{padding:20px}
+ .review-questions{font-size:17px}
+ .story-date{font-size:14px}
+ .image-dialog-heading{padding:9px 12px;gap:12px}
+ .image-dialog-heading h2{font-size:15px}
+ .image-dialog-scroll{padding:8px}
+}
+@media print{
+ .image-dialog,.enlarge-hint{display:none!important}
+ .image-open{border:0;box-shadow:none;padding:0}
+ .story-figure{break-inside:avoid}
+ .story-date{max-width:none}
+}
