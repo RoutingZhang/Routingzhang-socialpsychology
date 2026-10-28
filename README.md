@@ -4,7 +4,7 @@ A static academic website built with HTML, CSS, and JavaScript. No installation 
 
 ## Pages
 
-- `index.html`: biography, research, contact, and friends.
+- `index.html`: welcome screen with a moving keyword background, biography, research, contact, and friends.
 - `becoming.html`: Behind the Paper: Growth & Gratitude collection.
 - `purse-and-cradle-story.html`: reflection on The Purse and Cradle.
 - `awe-to-wellness-story.html`: reflection on From Awe to Wellness.

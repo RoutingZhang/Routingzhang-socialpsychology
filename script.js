@@ -33,6 +33,38 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Progressive enhancement: articles are always readable, including without JS.
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+
+// Only the background moves; the portrait and greeting remain stationary.
+const keywordHero = document.querySelector('.landing-hero');
+const keywordButton = document.querySelector('.keyword-motion');
+if (keywordHero && keywordButton) {
+  let manuallyPaused = false;
+  let heroVisible = true;
+  const syncKeywords = () => {
+    const enabled = !reducedMotion.matches;
+    keywordHero.classList.toggle('keywords-playing', enabled && !manuallyPaused && heroVisible && !document.hidden);
+    keywordButton.hidden = !enabled;
+    keywordButton.dataset.paused = String(manuallyPaused);
+    const label = manuallyPaused ? 'Play background animation' : 'Pause background animation';
+    keywordButton.setAttribute('aria-label', label);
+    keywordButton.title = label;
+  };
+  keywordButton.addEventListener('click', () => {
+    manuallyPaused = !manuallyPaused;
+    syncKeywords();
+  });
+  reducedMotion.addEventListener('change', syncKeywords);
+  document.addEventListener('visibilitychange', syncKeywords);
+  if ('IntersectionObserver' in window) {
+    const keywordObserver = new IntersectionObserver(entries => {
+      heroVisible = entries[0].isIntersecting;
+      syncKeywords();
+    });
+    keywordObserver.observe(keywordHero);
+  }
+  syncKeywords();
+}
+
 const activeReveals = new Map();
 let revealObserver;
 let pointerCleanup;
