@@ -212,3 +212,22 @@ strong{font-weight:700}
  .contact h2{color:#222}
  .email-button{color:#222;background:white;box-shadow:none;border:1px solid #888}
 }
+
+/* Growth is available directly on the homepage. */
+.growth-cover{display:block;width:100%;aspect-ratio:3/2;margin-bottom:24px;background:var(--paper);border-radius:6px;overflow:hidden;text-decoration:none}
+.growth-cover img{display:block;width:100%;height:100%;object-fit:contain}
+.growth-cover:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.home-growth{padding:50px 0 100px}
+.home-growth .section-head{margin-bottom:54px;text-align:center}
+.home-growth .section-head h2{position:relative;font-size:40px;font-weight:700;letter-spacing:3px;text-transform:uppercase;line-height:1.25;color:var(--heading)}
+.home-growth .section-head h2::after{content:"";position:absolute;width:30px;height:3px;border-radius:3px;background:#a98ba0;left:50%;bottom:-19px;transform:translateX(-50%)}
+@media(max-width:760px){.home-growth{padding:30px 0 64px}.home-growth .section-head h2,.becoming h1{font-size:clamp(26px,7vw,34px);letter-spacing:1.5px}.growth-cover{margin-bottom:20px}}
+
+/* Friends and scholars share the existing plum footer. */
+.footer-main{display:grid;grid-template-columns:minmax(180px,.7fr) minmax(0,1.2fr) minmax(0,1.1fr);gap:40px;padding-block:56px}
+.footer-intro{font-size:14px;line-height:1.8;color:#d5c9d2;margin:10px 0 20px}
+.footer-friends li{font-size:15px;line-height:1.9;margin:0 0 16px;overflow-wrap:anywhere}
+.footer-friends a{display:inline;min-height:0;padding:0;color:#fffafc;font-size:inherit;line-height:inherit;font-weight:600;text-underline-offset:4px}
+.footer-description{color:#d5c9d2}
+@media(max-width:1050px){.footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 40px}.footer-about{grid-column:1/-1}}
+@media(max-width:640px){.footer-main{grid-template-columns:minmax(0,1fr);gap:32px;padding-block:40px}.footer-about{grid-column:auto}.footer-intro{margin-bottom:15px}}
